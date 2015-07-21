@@ -1,0 +1,85 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<script src="bower_components/jquery/dist/jquery.js"></script>
+
+
+<!--Out component definition-->
+<dom-module id="text-box">
+
+<style>
+
+
+	.block{
+		width: 34%;
+		position: absolute;
+		background-color: rgba(0,0,0,.5);
+		color: white;
+		margin-left: 60%;
+		margin-top: 5%;
+		padding: 2%;
+	}
+	#slogan{
+		font-size: 25px;
+	}
+
+	.reasons{
+		list-style-type: none;
+		font-size: 15px;
+		color: white;
+	}
+
+	#bottom{
+		font-size: 20px;
+	}
+
+
+</style>
+<template class="template">
+	<div class="block">
+		<p class="text" id="slogan">LimoHere.com: An everyday tool yous carry for success.</p>
+        <ul class="navigation" id="">
+            <li class="reasons">
+               <br> Request limo for immediate pickup or for future bookings.
+            </li>
+            <li class="reasons">
+                Select chauffeurs by fare quotation, ETA, type of car, feedback rating or payment method.
+            </li>
+
+            <li class="reasons"> 
+            	See where your driver is for the current reservation. 
+            </li>
+            <li class="reasons">
+                View all details of past and future booked trips.
+            </li>
+            <li class="reasons">
+                See account details.
+            </li>
+        </ul>
+		<div class="clear"></div>
+		<p class="text" id="bottom"><br>All of the above features are available to registered users. We only ask for your cell phone number if you are registering as a passenger on our mobile site.</p>
+	</div>
+	<div class="clear"></div>
+</template>
+
+
+</dom-module>
+
+<script>
+	Polymer({
+		is: "text-box",
+		properties: {
+			title:{
+				type: String,
+				value: "LimoHere"
+			}
+		},
+		ready: function() {
+			console.log("It works!")
+		}
+	});
+
+	$(document).ready(function() { 
+		$(".choices").hover(function() {
+			$("#lists").css('color','red');
+		});
+	 });
+</script>
